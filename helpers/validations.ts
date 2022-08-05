@@ -30,7 +30,8 @@ export const isExpDate = (expDate: string) => {
 }
 
 export const isCVV = (str: string) => {
-    return str?.length === 3
+    const containsOnlyNumberRe = new RegExp(/^\d+$/)
+    return str?.length === 3 && containsOnlyNumberRe.test(str)
 }
 
 export const isValidImage = (source: string | ArrayBuffer) => {

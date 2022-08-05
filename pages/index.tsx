@@ -33,6 +33,17 @@ export default function Home() {
   const [errorMessage, setErrorMessage] = useState("");
   const [isSuccess, setIsSuccess] = useState(false);
 
+  const onEnterPress = (e: KeyboardEvent) => {
+    if (e.key === "Enter") {
+      handleContinue()
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keypress", onEnterPress)
+    return () => window.removeEventListener("keypress", onEnterPress)
+  }, [values])
+
   useEffect(() => {
     let timeout: NodeJS.Timeout;
     if (isSuccess) {
