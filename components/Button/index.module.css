@@ -1,0 +1,33 @@
+.button {
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+    width: 100px;
+}
+
+.primaryButton {
+    color: #fff;
+    background-color: var(--primaryBlue);
+}
+
+.secondaryButton {
+    background-color: var(--secondaryBlue);
+    color:#43465a
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.button:active {
+    opacity: 0.8;
+}
+
+.button:disabled {
+    background-color: var(--disabledGray);
+    color: var(--gray);
+    cursor: not-allowed;
+}

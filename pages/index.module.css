@@ -1,0 +1,84 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 350px;
+    min-width: 300px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.firstStep {
+    display: inherit;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+    margin: 16px 0;
+}
+
+.secondStep {
+    width: 100%;
+    margin: 16px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.secondStep > div:nth-child(-n + 2) {
+    grid-column: span 2;
+}
+
+.thirdStep {
+    width: 100%;
+    margin: 16px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.errorBox {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #8c2626;
+    background-color: #ffe2e2;
+    width: 100%;
+    position: absolute;
+    top: 10%
+}
+
+.errorBox p {
+    color: #8c2626;
+}
+
+.successMessage {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #268c2e;
+    background-color: #e5ffe2;
+    width: 100%;
+    position: absolute;
+    top: 10%
+}
+
+.successMessage p {
+    color:#268c2e
+}
+
+@media (max-height: 710px) {
+    .errorBox {
+        top: 15px
+    }
+
+    .container {
+        justify-content: flex-end;
+        padding-bottom: 30px;
+    }
+}

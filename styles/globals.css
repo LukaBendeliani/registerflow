@@ -1,9 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+  --lightGray: #E0E2E7;
+  --gray: #cecece;
+  --disabledGray: #EBEBE4;
+  --primaryBlue: #3673F5;
+  --secondaryBlue: #D3E1FF;
+
+}
+
 html,
 body {
   padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  margin: 0; 
 }
 
 a {
@@ -13,14 +22,7 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: Montserrat;
+  user-select: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
-}
